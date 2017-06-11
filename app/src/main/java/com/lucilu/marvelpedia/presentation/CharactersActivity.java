@@ -1,4 +1,6 @@
-package com.lucilu.marvelpedia;
+package com.lucilu.marvelpedia.presentation;
+
+import com.lucilu.marvelpedia.R;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
