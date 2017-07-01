@@ -1,15 +1,17 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.feature'
 
 android {
-    compileSdkVersion 25
+    baseFeature true
+
+    compileSdkVersion 26
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.lucilu.marvelpedia"
-        minSdkVersion 21
-        targetSdkVersion 25
+        minSdkVersion 19
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -53,6 +55,7 @@ ext {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    application project(":marvelpedia-app")
 
     // Android Support
     compile "com.android.support:support-v13:$dependencyVersions.supportLibrary"
