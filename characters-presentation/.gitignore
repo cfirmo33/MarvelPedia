@@ -1,0 +1,4 @@
+/build
+
+# Keep API keys out of repository
+api.properties

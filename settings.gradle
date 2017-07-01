@@ -1,1 +1,1 @@
-include ':marvelpedia-base', ':marvelpedia-app'
+include ':characters-presentation', ':marvelpedia-app', ':marvelpedia-base'
