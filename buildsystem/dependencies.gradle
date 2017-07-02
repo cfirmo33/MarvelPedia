@@ -67,7 +67,7 @@ ext {
             picasso            : "com.squareup.picasso:picasso:${picasso}",
 
             retrofit2          : "com.squareup.retrofit2:retrofit:${retrofit2}",
-            retrofitRxAdapter  : "com.squareup.retrofit2:adapter-rxjava:${retrofit2}",
+            retrofitRxAdapter  : "com.squareup.retrofit2:adapter-rxjava2:${retrofit2}",
             retrofitConverter  : "com.squareup.retrofit2:converter-gson:${retrofit2}",
 
             gson               : "com.google.code.gson:gson:${gson}",
