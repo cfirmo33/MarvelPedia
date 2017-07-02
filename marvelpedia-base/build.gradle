@@ -1,31 +1,91 @@
 apply plugin: 'com.android.feature'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "25.0.2"
+    def androidVersions = rootProject.ext.android
 
-    baseFeature true
+    compileSdkVersion androidVersions.compileSdkVersion
+    buildToolsVersion androidVersions.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion androidVersions.minSdkVersion
+        targetSdkVersion androidVersions.targetSdkVersion
     }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
+
+    baseFeature true
 }
 
 dependencies {
-    application project(":marvelpedia-app")
-    feature project(":characters-presentation")
+    def commonDependencies = rootProject.ext.commonDependencies
+    def developmentDependencies = rootProject.ext.developmentDependencies
+    def commonTestDependencies = rootProject.ext.commonTestDependencies
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'com.android.support:appcompat-v7:26.0.0-beta2'
-    testImplementation 'junit:junit:4.12'
+    application project(":marvelpedia-app")
+    feature project(":characters-presentation")
+
+    // Android
+    compile commonDependencies.supportAppCompatV7
+    compile commonDependencies.supportDesign
+    compile commonDependencies.supportV13
+    compile commonDependencies.supportAnnotation
+    compile commonDependencies.supportCardView
+    compile commonDependencies.supportRecyclerView
+    compile commonDependencies.constraintLayout
+
+    // Dagger 2
+    compile commonDependencies.dagger2
+    annotationProcessor commonDependencies.dagger2Compiler
+    testAnnotationProcessor commonDependencies.dagger2Compiler
+    provided commonDependencies.javaxAnnotation
+
+    // RxJava 2
+    compile commonDependencies.rxJava2
+    compile commonDependencies.rxAndroid
+
+    // Networking
+    compile commonDependencies.okHttp
+    compile commonDependencies.okHttpInterceptor
+
+    // Picasso
+    compile commonDependencies.picasso
+
+    // Networking Retrofit
+    compile commonDependencies.retrofit2
+    compile commonDependencies.retrofitRxAdapter
+    compile commonDependencies.retrofitConverter
+
+    // Gson
+    compile commonDependencies.gson
+
+    // Auto-Value
+    provided commonDependencies.autoValue
+    annotationProcessor commonDependencies.autoValue
+    testAnnotationProcessor commonDependencies.autoValue
+    androidTestAnnotationProcessor commonDependencies.autoValue
+
+    // Optionals
+    compile commonDependencies.options
+
+    // Timber
+    compile commonDependencies.timber
+
+    // Stetho
+    compile developmentDependencies.stetho
+    compile developmentDependencies.stethoOkHttp
+
+    // Leak Canary
+    debugCompile developmentDependencies.leakcanary
+    releaseCompile developmentDependencies.leakcanaryNoOp
+    testCompile developmentDependencies.leakcanaryNoOp
+
+    // Chuck
+    debugCompile developmentDependencies.chuck
+    releaseCompile developmentDependencies.chuckNoOp
+    testCompile developmentDependencies.chuckNoOp
+
+    // Unit testing
+    testCompile commonTestDependencies.junit
+    testCompile commonTestDependencies.assertj
+    testCompile commonTestDependencies.mockito
 }
