@@ -1,6 +1,7 @@
 package com.lucilu.marvelpedia.base;
 
 import com.lucilu.marvelpedia.base.injection.components.ApplicationComponent;
+import com.lucilu.marvelpedia.base.injection.components.DaggerApplicationComponent;
 
 import android.app.Application;
 import android.support.annotation.CallSuper;
@@ -24,12 +25,15 @@ public class MarvelPediaApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        createComponent().inject(this);
+        getComponent().inject(this);
         initialize();
     }
 
-    private ApplicationComponent createComponent() {
-        return null;
+    private ApplicationComponent getComponent() {
+        if(component == null) {
+            component = DaggerApplicationComponent.builder().build();
+        }
+        return component;
     }
 
     private void initialize() {
