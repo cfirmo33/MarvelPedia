@@ -10,7 +10,12 @@ android {
         minSdkVersion androidVersions.minSdkVersion
         targetSdkVersion androidVersions.targetSdkVersion
     }
-
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
     baseFeature true
 }
 
@@ -21,8 +26,8 @@ dependencies {
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    application project(":marvelpedia-app")
-    feature project(":characterlist-feature")
+    application project(':app')
+    feature project(':characterlist')
 
     // Android
     compile commonDependencies.supportAppCompatV7

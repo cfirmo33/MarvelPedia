@@ -27,6 +27,6 @@ android {
 }
 
 dependencies {
-    implementation project(':marvelpedia-base')
-    implementation project(':characterlist-feature')
+    implementation project(':base')
+    implementation project(':characterlist')
 }
