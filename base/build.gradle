@@ -24,73 +24,71 @@ dependencies {
     def developmentDependencies = rootProject.ext.developmentDependencies
     def commonTestDependencies = rootProject.ext.commonTestDependencies
 
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
     application project(':app')
     feature project(':characterlist')
 
     // Android
-    compile commonDependencies.supportAppCompatV7
-    compile commonDependencies.supportDesign
-    compile commonDependencies.supportV13
-    compile commonDependencies.supportAnnotation
-    compile commonDependencies.supportCardView
-    compile commonDependencies.supportRecyclerView
-    compile commonDependencies.constraintLayout
+    implementation commonDependencies.supportAppCompatV7
+    implementation commonDependencies.supportV13
+    implementation commonDependencies.supportAnnotation
+    implementation commonDependencies.supportCardView
+    implementation commonDependencies.supportRecyclerView
+    implementation commonDependencies.constraintLayout
+    api commonDependencies.supportDesign
 
     // Dagger 2
-    compile commonDependencies.dagger2
+    implementation commonDependencies.dagger2
     annotationProcessor commonDependencies.dagger2Compiler
     testAnnotationProcessor commonDependencies.dagger2Compiler
-    provided commonDependencies.javaxAnnotation
+    compileOnly commonDependencies.javaxAnnotation
 
     // RxJava 2
-    compile commonDependencies.rxJava2
-    compile commonDependencies.rxAndroid
+    implementation commonDependencies.rxJava2
+    implementation commonDependencies.rxAndroid
 
     // Networking
-    compile commonDependencies.okHttp
-    compile commonDependencies.okHttpInterceptor
+    implementation commonDependencies.okHttp
+    implementation commonDependencies.okHttpInterceptor
 
     // Picasso
-    compile commonDependencies.picasso
+    implementation commonDependencies.picasso
 
     // Networking Retrofit
-    compile commonDependencies.retrofit2
-    compile commonDependencies.retrofitRxAdapter
-    compile commonDependencies.retrofitConverter
+    implementation commonDependencies.retrofit2
+    implementation commonDependencies.retrofitRxAdapter
+    implementation commonDependencies.retrofitConverter
 
     // Gson
-    compile commonDependencies.gson
+    implementation commonDependencies.gson
 
     // Auto-Value
-    provided commonDependencies.autoValue
+    compileOnly commonDependencies.autoValue
     annotationProcessor commonDependencies.autoValue
     testAnnotationProcessor commonDependencies.autoValue
     androidTestAnnotationProcessor commonDependencies.autoValue
 
     // Optionals
-    compile commonDependencies.options
+    implementation commonDependencies.options
 
     // Timber
-    compile commonDependencies.timber
+    implementation commonDependencies.timber
 
     // Stetho
-    compile developmentDependencies.stetho
-    compile developmentDependencies.stethoOkHttp
+    implementation developmentDependencies.stetho
+    implementation developmentDependencies.stethoOkHttp
 
     // Leak Canary
-    debugCompile developmentDependencies.leakcanary
-    releaseCompile developmentDependencies.leakcanaryNoOp
-    testCompile developmentDependencies.leakcanaryNoOp
+    debugImplementation developmentDependencies.leakcanary
+    releaseImplementation developmentDependencies.leakcanaryNoOp
+    testImplementation developmentDependencies.leakcanaryNoOp
 
     // Chuck
-    debugCompile developmentDependencies.chuck
-    releaseCompile developmentDependencies.chuckNoOp
-    testCompile developmentDependencies.chuckNoOp
+    debugImplementation developmentDependencies.chuck
+    releaseImplementation developmentDependencies.chuckNoOp
+    testImplementation developmentDependencies.chuckNoOp
 
     // Unit testing
-    testCompile commonTestDependencies.junit
-    testCompile commonTestDependencies.assertj
-    testCompile commonTestDependencies.mockito
+    testImplementation commonTestDependencies.junit
+    testImplementation commonTestDependencies.assertj
+    testImplementation commonTestDependencies.mockito
 }
