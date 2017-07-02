@@ -22,7 +22,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     application project(":marvelpedia-app")
-    feature project(":characters-presentation")
+    feature project(":characterlist-feature")
 
     // Android
     compile commonDependencies.supportAppCompatV7
