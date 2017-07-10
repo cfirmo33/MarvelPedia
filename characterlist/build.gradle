@@ -20,5 +20,35 @@ android {
 }
 
 dependencies {
-    api project(':base')
+    implementation project(':base')
+
+    // Android
+    implementation commonDependencies.supportAppCompatV7
+    implementation commonDependencies.supportV13
+    implementation commonDependencies.supportAnnotation
+    implementation commonDependencies.supportCardView
+    implementation commonDependencies.supportRecyclerView
+    implementation commonDependencies.constraintLayout
+    api commonDependencies.supportDesign
+
+    // Architecture components
+    implementation commonDependencies.archLifecycleRuntime
+    implementation commonDependencies.archLifecycleExtensions
+    annotationProcessor commonDependencies.archLifecycleCompiler
+    testAnnotationProcessor commonDependencies.archLifecycleCompiler
+
+    // Auto-Value
+    compileOnly commonDependencies.autoValue
+    annotationProcessor commonDependencies.autoValue
+    testAnnotationProcessor commonDependencies.autoValue
+    androidTestAnnotationProcessor commonDependencies.autoValue
+
+    // Unit testing
+    testImplementation commonTestDependencies.junit
+    testImplementation commonTestDependencies.assertj
+    testImplementation commonTestDependencies.mockito
+
+    // RxJava 2
+    implementation commonDependencies.rxJava2
+    implementation commonDependencies.rxAndroid
 }
