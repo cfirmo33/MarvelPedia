@@ -36,6 +36,12 @@ dependencies {
     implementation commonDependencies.constraintLayout
     api commonDependencies.supportDesign
 
+    // Architecture components
+    implementation commonDependencies.archLifecycleRuntime
+    implementation commonDependencies.archLifecycleExtensions
+    annotationProcessor commonDependencies.archLifecycleCompiler
+    testAnnotationProcessor commonDependencies.archLifecycleCompiler
+
     // Dagger 2
     implementation commonDependencies.dagger2
     annotationProcessor commonDependencies.dagger2Compiler

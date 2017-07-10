@@ -9,7 +9,7 @@ ext {
     // Libraries
     rxJava2 = '2.1.0'
     rxAndroid = '2.0.1'
-    archLifecycle = '1.0.0-alpha1'
+    archLifecycle = '1.0.0-alpha3'
     supportLibrary = '25.4.0'
     constraintLayout = '1.0.2'
     dagger2 = '2.11'
@@ -41,38 +41,42 @@ ext {
     ]
 
     commonDependencies = [
-            rxJava2            : "io.reactivex.rxjava2:rxjava:${rxJava2}",
-            rxAndroid          : "io.reactivex.rxjava2:rxandroid:${rxAndroid}",
+            rxJava2                : "io.reactivex.rxjava2:rxjava:${rxJava2}",
+            rxAndroid              : "io.reactivex.rxjava2:rxandroid:${rxAndroid}",
 
-            dagger2Compiler    : "com.google.dagger:dagger-compiler:${dagger2}",
-            dagger2            : "com.google.dagger:dagger:${dagger2}",
-            javaxAnnotation    : "org.glassfish:javax.annotation:${javaxAnnotation}",
+            dagger2Compiler        : "com.google.dagger:dagger-compiler:${dagger2}",
+            dagger2                : "com.google.dagger:dagger:${dagger2}",
+            javaxAnnotation        : "org.glassfish:javax.annotation:${javaxAnnotation}",
 
-            supportAppCompatV7 : "com.android.support:appcompat-v7:${supportLibrary}",
-            supportDesign      : "com.android.support:design:${supportLibrary}",
-            supportV13         : "com.android.support:support-v13:${supportLibrary}",
-            supportAnnotation  : "com.android.support:support-annotations:${supportLibrary}",
-            supportCardView    : "com.android.support:cardview-v7:${supportLibrary}",
-            supportRecyclerView: "com.android.support:recyclerview-v7:${supportLibrary}",
-            constraintLayout   : "com.android.support.constraint:constraint-layout:${constraintLayout}",
+            supportAppCompatV7     : "com.android.support:appcompat-v7:${supportLibrary}",
+            supportDesign          : "com.android.support:design:${supportLibrary}",
+            supportV13             : "com.android.support:support-v13:${supportLibrary}",
+            supportAnnotation      : "com.android.support:support-annotations:${supportLibrary}",
+            supportCardView        : "com.android.support:cardview-v7:${supportLibrary}",
+            supportRecyclerView    : "com.android.support:recyclerview-v7:${supportLibrary}",
+            constraintLayout       : "com.android.support.constraint:constraint-layout:${constraintLayout}",
 
-            autoValue          : "com.google.auto.value:auto-value:${autoValue}",
+            archLifecycleRuntime   : "android.arch.lifecycle:runtime:${archLifecycle}",
+            archLifecycleExtensions: "android.arch.lifecycle:extensions:${archLifecycle}",
+            archLifecycleCompiler  : "android.arch.lifecycle:compiler:${archLifecycle}",
 
-            options            : "com.github.tomaszpolanski:options:${options}",
+            autoValue              : "com.google.auto.value:auto-value:${autoValue}",
 
-            lottie             : "com.airbnb.android:lottie:${lottie}",
+            options                : "com.github.tomaszpolanski:options:${options}",
 
-            okHttp             : "com.squareup.okhttp3:okhttp:${okHttp}",
-            okHttpInterceptor  : "com.squareup.okhttp3:logging-interceptor:${okHttp}",
-            picasso            : "com.squareup.picasso:picasso:${picasso}",
+            lottie                 : "com.airbnb.android:lottie:${lottie}",
 
-            retrofit2          : "com.squareup.retrofit2:retrofit:${retrofit2}",
-            retrofitRxAdapter  : "com.squareup.retrofit2:adapter-rxjava2:${retrofit2}",
-            retrofitConverter  : "com.squareup.retrofit2:converter-gson:${retrofit2}",
+            okHttp                 : "com.squareup.okhttp3:okhttp:${okHttp}",
+            okHttpInterceptor      : "com.squareup.okhttp3:logging-interceptor:${okHttp}",
+            picasso                : "com.squareup.picasso:picasso:${picasso}",
 
-            gson               : "com.google.code.gson:gson:${gson}",
+            retrofit2              : "com.squareup.retrofit2:retrofit:${retrofit2}",
+            retrofitRxAdapter      : "com.squareup.retrofit2:adapter-rxjava2:${retrofit2}",
+            retrofitConverter      : "com.squareup.retrofit2:converter-gson:${retrofit2}",
 
-            timber             : "com.jakewharton.timber:timber:${timber}"
+            gson                   : "com.google.code.gson:gson:${gson}",
+
+            timber                 : "com.jakewharton.timber:timber:${timber}"
     ]
 
     commonTestDependencies = [
