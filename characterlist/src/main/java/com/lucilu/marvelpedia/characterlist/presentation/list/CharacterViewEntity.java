@@ -13,6 +13,11 @@ abstract class CharacterViewEntity {
     @NonNull
     abstract String name();
 
+    @NonNull
+    static CharacterViewEntity.Builder builder() {
+        return new AutoValue_CharacterViewEntity.Builder();
+    }
+
     @AutoValue.Builder
     interface Builder {
 
