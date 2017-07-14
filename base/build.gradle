@@ -33,44 +33,44 @@ dependencies {
     feature project(':characterlist')
 
     // Android
-    implementation commonDependencies.supportAppCompatV7
-    implementation commonDependencies.supportV13
-    implementation commonDependencies.supportAnnotation
-    implementation commonDependencies.supportCardView
-    implementation commonDependencies.supportRecyclerView
-    implementation commonDependencies.constraintLayout
+    api commonDependencies.supportAppCompatV7
+    api commonDependencies.supportV13
+    api commonDependencies.supportAnnotation
+    api commonDependencies.supportCardView
+    api commonDependencies.supportRecyclerView
+    api commonDependencies.constraintLayout
     api commonDependencies.supportDesign
 
     // Architecture components
-    implementation commonDependencies.archLifecycleRuntime
-    implementation commonDependencies.archLifecycleExtensions
+    api commonDependencies.archLifecycleRuntime
+    api commonDependencies.archLifecycleExtensions
     annotationProcessor commonDependencies.archLifecycleCompiler
     testAnnotationProcessor commonDependencies.archLifecycleCompiler
 
     // Dagger 2
-    implementation commonDependencies.dagger2
+    api commonDependencies.dagger2
     annotationProcessor commonDependencies.dagger2Compiler
     testAnnotationProcessor commonDependencies.dagger2Compiler
     compileOnly commonDependencies.javaxAnnotation
 
     // RxJava 2
-    implementation commonDependencies.rxJava2
-    implementation commonDependencies.rxAndroid
+    api commonDependencies.rxJava2
+    api commonDependencies.rxAndroid
 
     // Networking
-    implementation commonDependencies.okHttp
-    implementation commonDependencies.okHttpInterceptor
+    api commonDependencies.okHttp
+    api commonDependencies.okHttpInterceptor
 
     // Picasso
-    implementation commonDependencies.picasso
+    api commonDependencies.picasso
 
     // Networking Retrofit
-    implementation commonDependencies.retrofit2
-    implementation commonDependencies.retrofitRxAdapter
-    implementation commonDependencies.retrofitConverter
+    api commonDependencies.retrofit2
+    api commonDependencies.retrofitRxAdapter
+    api commonDependencies.retrofitConverter
 
     // Gson
-    implementation commonDependencies.gson
+    api commonDependencies.gson
 
     // Auto-Value
     compileOnly commonDependencies.autoValue
@@ -79,10 +79,10 @@ dependencies {
     androidTestAnnotationProcessor commonDependencies.autoValue
 
     // Optionals
-    implementation commonDependencies.options
+    api commonDependencies.options
 
     // Timber
-    implementation commonDependencies.timber
+    api commonDependencies.timber
 
     // Stetho
     implementation developmentDependencies.stetho
@@ -99,7 +99,7 @@ dependencies {
     testImplementation developmentDependencies.chuckNoOp
 
     // Unit testing
-    testImplementation commonTestDependencies.junit
-    testImplementation commonTestDependencies.assertj
-    testImplementation commonTestDependencies.mockito
+    testApi commonTestDependencies.junit
+    testApi commonTestDependencies.assertj
+    testApi commonTestDependencies.mockito
 }
