@@ -1,4 +1,4 @@
-package com.lucilu.marvelpedia.injection.modules;
+package com.lucilu.marvelpedia.base.injection.modules;
 
 import javax.inject.Singleton;
 

@@ -1,7 +1,7 @@
 package com.lucilu.marvelpedia.base.common.injection.components;
 
 import com.lucilu.marvelpedia.base.MarvelPediaApplication;
-import com.lucilu.marvelpedia.injection.modules.LoggingModule;
+import com.lucilu.marvelpedia.base.injection.modules.LoggingModule;
 
 import javax.inject.Singleton;
 
