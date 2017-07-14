@@ -16,26 +16,14 @@ import dagger.Provides;
 @Module
 public final class ActivityModule {
 
-    @NonNull
-    private final AppCompatActivity activity;
-
-    @NonNull
-    private final FragmentManager fragmentManager;
-
-    public ActivityModule(@NonNull final AppCompatActivity activity,
-                          @NonNull final FragmentManager fragmentManager) {
-        this.activity = activity;
-        this.fragmentManager = fragmentManager;
-    }
-
     @ForActivity
     @Provides
-    Context provideContext() {
+    Context provideContext(@NonNull final AppCompatActivity activity) {
         return activity;
     }
 
     @Provides
-    FragmentManager provideFragmentManager() {
-        return fragmentManager;
+    FragmentManager provideFragmentManager(@NonNull final AppCompatActivity activity) {
+        return activity.getSupportFragmentManager();
     }
 }

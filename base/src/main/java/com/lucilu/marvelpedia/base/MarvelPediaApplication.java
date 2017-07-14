@@ -1,7 +1,5 @@
 package com.lucilu.marvelpedia.base;
 
-import com.lucilu.marvelpedia.base.common.injection.components.DaggerApplicationComponent;
-
 import android.app.Application;
 import android.support.annotation.CallSuper;
 

@@ -99,7 +99,7 @@ dependencies {
     testImplementation developmentDependencies.chuckNoOp
 
     // Unit testing
-    testApi commonTestDependencies.junit
-    testApi commonTestDependencies.assertj
-    testApi commonTestDependencies.mockito
+    testImplementation commonTestDependencies.junit
+    testImplementation commonTestDependencies.assertj
+    testImplementation commonTestDependencies.mockito
 }
