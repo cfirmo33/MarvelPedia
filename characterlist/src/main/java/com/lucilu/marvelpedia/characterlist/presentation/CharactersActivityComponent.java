@@ -1,6 +1,6 @@
 package com.lucilu.marvelpedia.characterlist.presentation;
 
-import com.lucilu.marvelpedia.base.common.injection.components.ApplicationComponent;
+import com.lucilu.marvelpedia.base.ApplicationComponent;
 import com.lucilu.marvelpedia.base.common.injection.modules.ActivityModule;
 import com.lucilu.marvelpedia.base.common.injection.scopes.ActivityScope;
 

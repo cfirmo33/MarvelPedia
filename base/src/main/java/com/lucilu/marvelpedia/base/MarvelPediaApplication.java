@@ -1,6 +1,5 @@
 package com.lucilu.marvelpedia.base;
 
-import com.lucilu.marvelpedia.base.common.injection.components.ApplicationComponent;
 import com.lucilu.marvelpedia.base.common.injection.components.DaggerApplicationComponent;
 
 import android.app.Application;
