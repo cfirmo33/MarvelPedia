@@ -17,6 +17,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -51,4 +56,8 @@ dependencies {
     // RxJava 2
     implementation commonDependencies.rxJava2
     implementation commonDependencies.rxAndroid
+
+    // Optionals
+    implementation commonDependencies.options
+
 }
