@@ -2,7 +2,7 @@
           package="com.lucilu.marvelpedia.characterlist">
 
     <application>
-        <activity android:name=".presentation.home.CharactersActivity">
+        <activity android:name=".presentation.home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

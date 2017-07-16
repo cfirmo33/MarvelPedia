@@ -13,9 +13,9 @@ import dagger.Component;
  */
 @ActivityScope
 @Component(modules = {ActivityModule.class, SubcomponentsModule.class})
-public interface CharactersActivityComponent {
+public interface HomeActivityComponent {
 
-    void inject(CharactersActivity activity);
+    void inject(HomeActivity activity);
 
     @Component.Builder
     interface Builder {
@@ -23,6 +23,6 @@ public interface CharactersActivityComponent {
         @BindsInstance
         Builder activity(AppCompatActivity activity);
 
-        CharactersActivityComponent build();
+        HomeActivityComponent build();
     }
 }

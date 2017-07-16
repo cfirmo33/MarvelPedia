@@ -9,7 +9,7 @@ import com.lucilu.marvelpedia.characterlist.presentation.home.characters.Charact
 
 import static polanski.option.Option.ofObj;
 
-public class CharactersActivity extends BaseInjectingActivity<CharactersActivityComponent> {
+public class HomeActivity extends BaseInjectingActivity<HomeActivityComponent> {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,15 +21,15 @@ public class CharactersActivity extends BaseInjectingActivity<CharactersActivity
 
     @NonNull
     @Override
-    public CharactersActivityComponent createComponent() {
-        return DaggerCharactersActivityComponent.builder()
+    public HomeActivityComponent createComponent() {
+        return DaggerHomeActivityComponent.builder()
                                                 .activity(this)
                                                 .build();
     }
 
     @Override
-    public void onInject(@NonNull final CharactersActivityComponent charactersActivityComponent) {
-        charactersActivityComponent.inject(this);
+    public void onInject(@NonNull final HomeActivityComponent homeActivityComponent) {
+        homeActivityComponent.inject(this);
     }
 
     @Override
