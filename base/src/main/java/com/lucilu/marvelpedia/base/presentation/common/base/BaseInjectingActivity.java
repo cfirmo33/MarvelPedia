@@ -1,4 +1,4 @@
-package com.lucilu.marvelpedia.base.presentation.common;
+package com.lucilu.marvelpedia.base.presentation.common.base;
 
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
@@ -30,11 +30,11 @@ public abstract class BaseInjectingActivity<Component> extends AppCompatActivity
         return Preconditions.get(component);
     }
 
-    public abstract void onInject(@NonNull final Component component);
+    protected abstract void onInject(@NonNull final Component component);
 
     @LayoutRes
     protected abstract int getLayoutId();
 
     @NonNull
-    public abstract Component createComponent();
+    protected abstract Component createComponent();
 }

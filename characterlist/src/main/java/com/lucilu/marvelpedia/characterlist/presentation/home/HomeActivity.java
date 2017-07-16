@@ -3,7 +3,7 @@ package com.lucilu.marvelpedia.characterlist.presentation.home;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 
-import com.lucilu.marvelpedia.base.presentation.common.BaseInjectingActivity;
+import com.lucilu.marvelpedia.base.presentation.common.base.BaseInjectingActivity;
 import com.lucilu.marvelpedia.characterlist.R;
 import com.lucilu.marvelpedia.characterlist.presentation.home.characters.CharacterListFragment;
 
@@ -21,10 +21,10 @@ public class HomeActivity extends BaseInjectingActivity<HomeActivityComponent> {
 
     @NonNull
     @Override
-    public HomeActivityComponent createComponent() {
+    protected HomeActivityComponent createComponent() {
         return DaggerHomeActivityComponent.builder()
-                                                .activity(this)
-                                                .build();
+                                          .activity(this)
+                                          .build();
     }
 
     @Override

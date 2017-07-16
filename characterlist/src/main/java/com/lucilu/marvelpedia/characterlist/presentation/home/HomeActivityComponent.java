@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.lucilu.marvelpedia.base.common.injection.modules.ActivityModule;
 import com.lucilu.marvelpedia.base.common.injection.scopes.ActivityScope;
+import com.lucilu.marvelpedia.characterlist.presentation.home.characters.CharacterListFragmentComponent;
 
 import dagger.BindsInstance;
 import dagger.Component;
@@ -12,10 +13,12 @@ import dagger.Component;
  * Created by Lucia on 14/07/2017.
  */
 @ActivityScope
-@Component(modules = {ActivityModule.class, SubcomponentsModule.class})
+@Component(modules = {ActivityModule.class})
 public interface HomeActivityComponent {
 
     void inject(HomeActivity activity);
+
+    CharacterListFragmentComponent createCharacterListFragmentComponent();
 
     @Component.Builder
     interface Builder {

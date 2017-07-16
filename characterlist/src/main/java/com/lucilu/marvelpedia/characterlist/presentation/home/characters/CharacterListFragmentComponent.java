@@ -13,9 +13,4 @@ public interface CharacterListFragmentComponent {
 
     void inject(CharacterListFragment fragment);
 
-    @Subcomponent.Builder
-    interface Builder {
-
-        CharacterListFragmentComponent build();
-    }
 }

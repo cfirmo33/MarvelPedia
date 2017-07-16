@@ -1,4 +1,4 @@
-package com.lucilu.marvelpedia.base.presentation.common;
+package com.lucilu.marvelpedia.base.presentation.common.base;
 
 import android.content.Context;
 import android.os.Bundle;
