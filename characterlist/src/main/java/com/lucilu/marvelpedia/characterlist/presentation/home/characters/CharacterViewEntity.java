@@ -1,4 +1,4 @@
-package com.lucilu.marvelpedia.characterlist.presentation.list;
+package com.lucilu.marvelpedia.characterlist.presentation.home.characters;
 
 import android.support.annotation.NonNull;
 

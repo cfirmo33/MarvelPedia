@@ -1,11 +1,11 @@
-package com.lucilu.marvelpedia.characterlist.presentation;
+package com.lucilu.marvelpedia.characterlist.presentation.home;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 
 import com.lucilu.marvelpedia.base.presentation.common.BaseInjectingActivity;
 import com.lucilu.marvelpedia.characterlist.R;
-import com.lucilu.marvelpedia.characterlist.presentation.list.CharacterListFragment;
+import com.lucilu.marvelpedia.characterlist.presentation.home.characters.CharacterListFragment;
 
 import static polanski.option.Option.ofObj;
 

@@ -1,4 +1,4 @@
-package com.lucilu.marvelpedia.characterlist.presentation;
+package com.lucilu.marvelpedia.characterlist.presentation.home;
 
 import android.support.v7.app.AppCompatActivity;
 
@@ -12,7 +12,7 @@ import dagger.Component;
  * Created by Lucia on 14/07/2017.
  */
 @ActivityScope
-@Component(modules = {ActivityModule.class})
+@Component(modules = {ActivityModule.class, SubcomponentsModule.class})
 public interface CharactersActivityComponent {
 
     void inject(CharactersActivity activity);
