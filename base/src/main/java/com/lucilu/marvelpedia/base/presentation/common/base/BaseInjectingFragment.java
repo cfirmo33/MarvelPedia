@@ -1,10 +1,10 @@
 package com.lucilu.marvelpedia.base.presentation.common.base;
 
+import android.arch.lifecycle.LifecycleFragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.CallSuper;
 import android.support.annotation.LayoutRes;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 /**
  * Created by Lucia on 11/07/2017.
  */
-public abstract class BaseInjectingFragment extends Fragment {
+public abstract class BaseInjectingFragment extends LifecycleFragment {
 
     @Override
     public void onAttach(final Context context) {
