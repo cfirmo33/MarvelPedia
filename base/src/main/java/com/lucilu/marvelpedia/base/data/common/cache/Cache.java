@@ -16,7 +16,6 @@ import static polanski.option.Option.none;
 import static polanski.option.Option.ofObj;
 
 /**
- * TODO: Tests
  Generic cache with timeout for the entries.
  */
 public class Cache<Key, Value> {
