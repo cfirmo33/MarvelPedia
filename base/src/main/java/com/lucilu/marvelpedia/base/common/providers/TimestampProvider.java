@@ -8,7 +8,7 @@ import javax.inject.Inject;
 public class TimestampProvider {
 
     @Inject
-    public TimestampProvider() {}
+    TimestampProvider() {}
 
     public long currentTimeMillis() {
         return System.currentTimeMillis();
