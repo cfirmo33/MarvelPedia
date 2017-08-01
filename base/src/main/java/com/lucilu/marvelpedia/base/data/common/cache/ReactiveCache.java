@@ -20,7 +20,6 @@ import static polanski.option.Option.ofObj;
 
 /**
  * TODO: Create documentation
- * TODO: Tests
  * @param <Key>
  * @param <Value>
  */
